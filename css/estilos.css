@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.grilla{
+    width: 100%;
+    height: 100vh;
+}
+/*Declaro los nombres de las etiquetas para
+la grilla por áreas*/
+header{
+    grid-area: header;
+    background-color: burlywood;
+}
+.productos{
+    grid-area: productos;
+    background-color: blue;
+}
+.servicios{
+    grid-area: servicios;
+    background-color: beige;
+}
+nav{
+    grid-area: nav;
+    background-color: burlywood;
+}
+aside{
+    grid-area: publicidad;
+    background-color: cornflowerblue;
+}
+footer{
+    grid-area: footer;
+    background-color: crimson;
+}
+
+.grilla {
+    display: grid;
+    grid-template-areas: 
+    "nav  header        header"
+    "nav  productos publicidad"
+    "nav  servicios publicidad "
+    "nav  footer        footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap:10px;
+    grid-row-gap: 20px;
+ }
+ .serviciosFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
